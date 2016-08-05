@@ -485,12 +485,12 @@ func InitializeConfig(subCmdVs ...*cobra.Command) error {
 			helpers.HugoReleaseVersion(), minVersion)
 	}
 
-	h, err := readMultilingualConfiguration()
+	h, err := hugolib.NewHugoSitesFromConfiguration()
 
 	if err != nil {
 		return err
 	}
-	//TODO(bep) refactor ...
+	//TODO(bep) ml refactor ...
 	Hugo = h
 
 	return nil
