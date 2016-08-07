@@ -18,6 +18,8 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/spf13/hugo/helpers"
+
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
@@ -673,7 +675,7 @@ func createTestSite(pageSources []source.ByteSource) *Site {
 
 	return &Site{
 		Source:   &source.InMemorySource{ByteSource: pageSources},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 }

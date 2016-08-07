@@ -128,7 +128,7 @@ func TestDraftAndFutureRender(t *testing.T) {
 	siteSetup := func(t *testing.T) *Site {
 		s := &Site{
 			Source:   &source.InMemorySource{ByteSource: sources},
-			Language: newDefaultLanguage(),
+			Language: helpers.NewDefaultLanguage(),
 		}
 
 		if err := buildSiteSkipRender(s); err != nil {
@@ -186,7 +186,7 @@ func TestFutureExpirationRender(t *testing.T) {
 	siteSetup := func(t *testing.T) *Site {
 		s := &Site{
 			Source:   &source.InMemorySource{ByteSource: sources},
-			Language: newDefaultLanguage(),
+			Language: helpers.NewDefaultLanguage(),
 		}
 
 		if err := buildSiteSkipRender(s); err != nil {
@@ -274,7 +274,7 @@ THE END.`, refShortcode))},
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
 		targets:  targetList{page: &target.PagePub{UglyURLs: uglyURLs}},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildAndRenderSite(s, "_default/single.html", "{{.Content}}"); err != nil {
@@ -342,7 +342,7 @@ func doTestShouldAlwaysHaveUglyURLs(t *testing.T, uglyURLs bool) {
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
 		targets:  targetList{page: &target.PagePub{UglyURLs: uglyURLs, PublishDir: "public"}},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildAndRenderSite(s,
@@ -432,7 +432,7 @@ func doTestSectionNaming(t *testing.T, canonify, uglify, pluralize bool) {
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
 		targets:  targetList{page: &target.PagePub{UglyURLs: uglify}},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildAndRenderSite(s,
@@ -494,7 +494,7 @@ func TestSkipRender(t *testing.T) {
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
 		targets:  targetList{page: &target.PagePub{UglyURLs: true}},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildAndRenderSite(s,
@@ -549,7 +549,7 @@ func TestAbsURLify(t *testing.T) {
 			s := &Site{
 				Source:   &source.InMemorySource{ByteSource: sources},
 				targets:  targetList{page: &target.PagePub{UglyURLs: true}},
-				Language: newDefaultLanguage(),
+				Language: helpers.NewDefaultLanguage(),
 			}
 			t.Logf("Rendering with BaseURL %q and CanonifyURLs set %v", viper.GetString("baseURL"), canonify)
 
@@ -643,7 +643,7 @@ func TestOrderedPages(t *testing.T) {
 	viper.Set("baseurl", "http://auth/bub")
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: weightedSources},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildSiteSkipRender(s); err != nil {
@@ -712,7 +712,7 @@ func TestGroupedPages(t *testing.T) {
 	viper.Set("baseurl", "http://auth/bub")
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: groupedSources},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildSiteSkipRender(s); err != nil {
@@ -897,7 +897,7 @@ func TestWeightedTaxonomies(t *testing.T) {
 	viper.Set("taxonomies", taxonomies)
 	s := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildSiteSkipRender(s); err != nil {
@@ -966,7 +966,7 @@ func setupLinkingMockSite(t *testing.T) *Site {
 
 	site := &Site{
 		Source:   &source.InMemorySource{ByteSource: sources},
-		Language: newDefaultLanguage(),
+		Language: helpers.NewDefaultLanguage(),
 	}
 
 	if err := buildSiteSkipRender(site); err != nil {
