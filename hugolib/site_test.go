@@ -311,7 +311,6 @@ THE END.`, refShortcode))},
 // Issue #939
 // Issue #1923
 func TestShouldAlwaysHaveUglyURLs(t *testing.T) {
-	hugofs.InitMemFs()
 	for _, uglyURLs := range []bool{true, false} {
 		doTestShouldAlwaysHaveUglyURLs(t, uglyURLs)
 	}
@@ -377,12 +376,7 @@ func doTestShouldAlwaysHaveUglyURLs(t *testing.T, uglyURLs bool) {
 	}
 
 	for _, test := range tests {
-		file, err := hugofs.Destination().Open(test.doc)
-		if err != nil {
-			t.Fatalf("Did not find %s in target: %s", test.doc, err)
-		}
-
-		content := helpers.ReaderToString(file)
+		content := readDestination(t, test.doc)
 
 		if content != test.expected {
 			t.Errorf("%s content expected:\n%q\ngot:\n%q", test.doc, test.expected, content)
