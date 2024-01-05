@@ -1,7 +1,8 @@
 <!--
---- Readme.md Snippet without images Start ---
+&lt;--- Readme.md Snippet without images Start ---&gt;
 ## Tech Stack
 mcabreradev/hugo is built on the following main stack:
+
 - [wercker](http://wercker.com/) – Continuous Integration
 - [Python](https://www.python.org) – Languages
 - [Golang](http://golang.org/) – Languages
@@ -11,11 +12,13 @@ mcabreradev/hugo is built on the following main stack:
 - [Travis CI](http://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet without images End ---
 
---- Readme.md Snippet with images Start ---
+&lt;--- Readme.md Snippet without images End ---&gt;
+
+&lt;--- Readme.md Snippet with images Start ---&gt;
 ## Tech Stack
 mcabreradev/hugo is built on the following main stack:
+
 - <img width='25' height='25' src='https://img.stackshare.io/service/897/S67KcxKE.png' alt='wercker'/> [wercker](http://wercker.com/) – Continuous Integration
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1005/O6AczwfV_400x400.png' alt='Golang'/> [Golang](http://golang.org/) – Languages
@@ -25,14 +28,15 @@ mcabreradev/hugo is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png' alt='Travis CI'/> [Travis CI](http://travis-ci.com/) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
---- Readme.md Snippet with images End ---
+
+&lt;--- Readme.md Snippet with images End ---&gt;
 -->
 <div align="center">
 
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [mcabreradev/hugo](https://github.com/mcabreradev/hugo)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|10<br/>Tools used|11/14/23 <br/>Report generated|
+|10<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -130,9 +134,9 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[Pygments](https://pypi.org/Pygments)|v2.1.3|03/13/16|Bjørn Erik Pedersen |BSD-3-Clause|[CVE-2021-27291](https://github.com/advisories/GHSA-pq64-v7f5-gqh8) (High)<br/>[CVE-2021-20270](https://github.com/advisories/GHSA-9w8r-397f-prfh) (High)<br/>[CVE-2022-40896](https://github.com/advisories/GHSA-mrwq-x4v8-fh7p) (Moderate)|
+|[Pygments](https://pypi.org/project/Pygments)|v2.1.3|03/13/16|Bjørn Erik Pedersen |BSD-3-Clause|[CVE-2021-27291](https://github.com/advisories/GHSA-pq64-v7f5-gqh8) (High)<br/>[CVE-2021-20270](https://github.com/advisories/GHSA-9w8r-397f-prfh) (High)<br/>[CVE-2022-40896](https://github.com/advisories/GHSA-mrwq-x4v8-fh7p) (Moderate)|
 
 <br/>
 <div align='center'>
 
-Generated via [Stack File](https://github.com/apps/stack-file)
+Generated via [Stack File](https://github.com/marketplace/stack-file)
